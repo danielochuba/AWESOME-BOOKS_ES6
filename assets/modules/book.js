@@ -1,21 +1,22 @@
+/* eslint-disable import/prefer-default-export */
 export class BookList {
-    constructor() {
-      this.books = JSON.parse(localStorage.getItem('books')) || [];
-      this.table = document.querySelector('#book-list tbody');
-      this.form = document.querySelector('form');
-      this.titleInput = document.querySelector('#title');
-      this.authorInput = document.querySelector('#author');
-  
-      // Bind event listeners
-      this.form.addEventListener('submit', this.addBook.bind(this));
-      this.table.addEventListener('click', this.removeBook.bind(this));
-      // Display books
-      this.displayBooks();
-    }
-  
+  constructor() {
+    this.books = JSON.parse(localStorage.getItem('books')) || [];
+    this.table = document.querySelector('#book-list tbody');
+    this.form = document.querySelector('form');
+    this.titleInput = document.querySelector('#title');
+    this.authorInput = document.querySelector('#author');
+
+    // Bind event listeners
+    this.form.addEventListener('submit', this.addBook.bind(this));
+    this.table.addEventListener('click', this.removeBook.bind(this));
+    // Display books
+    this.displayBooks();
+  }
+
     // Save books to local storage
     saveBooks = () => localStorage.setItem('books', JSON.stringify(this.books));
-  
+
     // Display all books in the list
     displayBooks = () => {
       this.table.innerHTML = '';
@@ -29,7 +30,7 @@ export class BookList {
         this.table.appendChild(row);
       });
     }
-  
+
     // Add a new book to the list
     addBook = (e) => {
       e.preventDefault();
@@ -45,7 +46,7 @@ export class BookList {
       this.titleInput.value = '';
       this.authorInput.value = '';
     }
-  
+
     // Remove a book from the list
     removeBook = (e) => {
       if (!e.target.classList.contains('delete-button')) {
@@ -57,4 +58,4 @@ export class BookList {
       this.saveBooks();
       this.displayBooks();
     }
-  }
+}
