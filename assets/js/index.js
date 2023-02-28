@@ -1,6 +1,10 @@
 import { BookList } from "../modules/book.js";
-import { listSection, addNewSection, contactSection, listLink, addNewLink, contactLink } from "../modules/target.js";
+import {
+     listSection, addNewSection, contactSection, listLink, addNewLink, contactLink 
+    } from '../modules/target.js';
+
 import { DateTime } from '../modules/luxon.js';
+
 const dateData = DateTime.now();
 
 // Create a new instance of the BookList class
@@ -26,13 +30,13 @@ contactLink.addEventListener('click', () => {
   document.querySelector('.date-time').innerHTML = dateData.toLocaleString(DateTime.DATETIME_MED);
 });
 
-const navButtons = document.querySelectorAll('.link-item');
+  const navButtons = document.querySelectorAll('.link-item');
 
-navButtons.forEach((button) => {
-button.addEventListener('click', () => {
+  navButtons.forEach((button) => {
+    button.addEventListener('click', () => {
   // Remove the active class from all buttons
-  navButtons.forEach((btn) => {
-    btn.classList.remove('active');
+    navButtons.forEach((btn) => {
+   btn.classList.remove('active');
   });
 
   // Add the active class to the clicked button
