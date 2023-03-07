@@ -75,7 +75,7 @@
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://github.com/danielochuba/AWESOME-BOOKS_ES6)
+- [Live Demo Link](https://danielochuba.github.io/AWESOME-BOOKS_ES6/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
